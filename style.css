@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f5f2;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Containerul principal */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    /* max-width: 1300px; */
+    margin: 0 auto;
+}
+
+.art-card {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.art-card:hover {
+    transform: translateY(-5px);
+}
+
+.art-card img {
+    width: 100%;
+    /* Aspect ratio 4:3 asigură că toate sunt la fel fără să le știm rezoluția */
+    aspect-ratio: 2 / 3; 
+    object-fit: cover; 
+    object-position: center;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #8b7e66;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    gap: 10px;
+}
+
+.art-card h2 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    font-size: 1.3rem;
+    min-height: 3.2rem; 
+    overflow: hidden;
+}
+
+.art-card h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #8b7e66;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-section {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.info-section p { 
+    margin: 4px 0; 
+}
+
+.btn-details {
+    display: block;
+    text-align: center;
+    background-color: #8b7e66;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #1a1a1a;
+}
+
+/* details style */
+
+.details-container { 
+    max-width: 900px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background: white; 
+    border-radius: 12px; 
+}
+    .full-img { 
+        width: 100%; 
+        border-radius: 8px; 
+        margin-bottom: 30px; 
+    }
+    .back-link { 
+        display: flex; 
+        margin-bottom: 20px;
+        align-items: center; 
+        justify-content: flex-start;
+        text-decoration: none; 
+        color: #8b7e66; 
+        font-weight: bold; 
+    }
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+}
+
+.art-description {
+    /* font-family: "Playwrite IE", cursive; */
+    font-family: "Poppins", sans-serif;
+    font-size: 1.09rem;               
+    line-height: 1.7;                 
+    color: #333;                      
+    text-align: justify;             
+    text-indent: 1.5em;               
+    background: #fdf6f0;             
+    padding: 1rem 1.2rem;           
+    border-left: 4px solid #c59d5f;   
+    border-radius: 5px;             
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.art-description:hover {
+    transform: translateY(-3px);      
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); 
+}
+
+.art-key-el {
+    list-style: none;
+    padding: 0;
+}
+
+.art-key-el li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.art-key-el li i {
+    margin-right: 5px;
+    color: #f10f40; 
+    font-size: 18px;
+}
+
+.art-key-colors {
+    list-style: none;
+    padding: 0;
+}
+
+.art-key-colors li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.art-key-colors li i {
+    margin-right: 5px;
+    color: #f16a0f; 
+    font-size: 18px;
+}
